@@ -1,12 +1,12 @@
 import Header from "../components/Header/Header";
 import Rules from "../components/Rules/Rules"
 import style from "./Home.module.scss"
-import ChoiceContainer from "../components/ChoiceContainer/ChoiceContainer";
+import Game from "../components/Game/Game";
 const Home = () => {
   return (
     <div className={style.container}>
         <Header />
-        <ChoiceContainer />
+        <Game />
         <Rules />
     </div>
   )

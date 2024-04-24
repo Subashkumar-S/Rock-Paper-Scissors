@@ -1,9 +1,10 @@
 import style from "./Choice.module.scss"
-function Choice({ image }) {
+import {rock} from "../../assets"
+function Choice() {
   return (
     <div className={style.container}>
       <div className={style.image}>
-        <img src={image} alt="lizard" />
+        <img src={rock} alt={name} />
       </div>
     </div>
   )
