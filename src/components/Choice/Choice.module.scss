@@ -1,23 +1,23 @@
 @import "../../variables";
 .container {
-  width: 90px;
-  height: 90px;
+  width: 8rem;
+  height: 8rem;
   background: $lizard-gradient;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100px;
-    z-index: 2;
+  border-radius: 9999px;
+  z-index: 2;
   @media screen and (min-width: 720px) {
-    width: 120px;
-    height: 120px;
+    width: 15rem;
+    height: 15rem;
   }
 }
 .image {
   width: 80%;
   height: 80%;
   background-color: whitesmoke;
-  border-radius: 100px;
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;

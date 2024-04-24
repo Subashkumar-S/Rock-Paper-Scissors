@@ -1,0 +1,70 @@
+@import "../../variables";
+.container {
+  width: 90%;
+  min-height: 60vh;
+//   border: 2px solid salmon;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-family: $font-family;
+
+  @media screen and (min-width: 720px) {
+    gap: 5rem;
+  }
+  
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  @media screen and (max-width: 720px) {
+    position: absolute;
+    bottom: 20vh;
+    gap: 1rem;
+  }
+}
+
+.result p{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.result button{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: $font-family;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.choiceContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    @media screen and (max-width: 720px) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+      }
+}
+
+.choiceContainer h4{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media screen and (min-width: 720px) {
+        font-size: 1.5rem;
+    }    
+}
