@@ -1,0 +1,12 @@
+.container{
+    width: 100vw;
+    height: 70vh;
+    background-image: url("../../assets/bg-pentagon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 2px solid yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
