@@ -6,7 +6,6 @@ const Rules = () => {
     const handleClick = () => {
         setVisible(prev => !prev);
     }
-    console.log(visible);
     return (
         <>
             <button onClick={handleClick} className={style.button}>Rules</button>

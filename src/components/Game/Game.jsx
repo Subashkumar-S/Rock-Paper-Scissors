@@ -1,8 +1,13 @@
-import { useState } from "react";
 import { lizard, paper, rock, scissors, spock } from "../../assets";
 import style from "./Game.module.scss";
+import { useDispatch } from "react-redux";
+import { setUserChoice } from "../../redux/gameSlice";
+import {useNavigate} from "react-router-dom";
 
 const Game = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const choices = [
         { name: "rock", image: rock, background: "red" },
         { name: "paper", image: paper, background: "blue" },
@@ -11,11 +16,10 @@ const Game = () => {
         { name: "spock", image: spock, background: "cyan" }
     ];
 
-    const [selectedChoice, setSelectedChoice] = useState(null);
-
-    const handleChoiceSelect = (choiceName) => {
-        setSelectedChoice(choiceName);
-    };
+    const handleChoiceClick = (choiceName) =>{
+        dispatch(setUserChoice(choiceName));
+        navigate("/result");
+    }
 
     return (
         <div className={style.container}>
@@ -24,7 +28,7 @@ const Game = () => {
                 <button
                     key={index}
                     className={`${style.choiceButton} ${style[choice.name]}`}
-                    onClick={() => handleChoiceSelect(choice.name)}
+                    onClick={() => {handleChoiceClick(choice.name)}}
                 >
                     <div className={style.image}>
                         <img src={choice.image} alt={choice.name} />
