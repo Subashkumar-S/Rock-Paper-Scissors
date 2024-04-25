@@ -1,6 +1,6 @@
 import style from "./Choice.module.scss"
 import {rock, paper, scissors, lizard, spock} from "../../assets"
-function Choice({choice}) {
+function Choice({choice, winner}) {
 
   const getImage = () => {
     switch (choice) {
@@ -20,11 +20,14 @@ function Choice({choice}) {
   }
 
   const imageUrl = getImage(choice);
-  console.log(choice)
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${style[choice]}`}>
+      
       <div className={style.image}>
-        <img src={imageUrl} alt={name} />
+      <div className={`${winner ? style.winner : ''}`}></div>
+      <div className={`${winner ? style.win : ''}`}></div>
+      <div className={`${winner ? style.won : ''}`}></div>
+        <img src={imageUrl} alt={choice} />
       </div>
     </div>
   )

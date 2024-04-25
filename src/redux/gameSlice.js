@@ -22,7 +22,7 @@ const gameSlice = createSlice({
             } else if(action.payload === "lose") {
                 state.score -= 1;
             } else {
-                state.score;
+                state.score += 0;
             }
         },
     },

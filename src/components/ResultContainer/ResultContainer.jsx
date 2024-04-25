@@ -19,7 +19,7 @@ const ResultContainer = () => {
       const randomChoice = choices[randomIndex];
       dispatch(setComputerChoice(randomChoice));
 
-      const result = calculateResult(playerChoice, computerChoice);
+      const result = calculateResult(playerChoice, randomChoice);
       setOutcome(result);
       dispatch(setResult(result));
     }
@@ -50,7 +50,7 @@ const ResultContainer = () => {
     <div className={style.container}>
       <div className={style.choiceContainer}>
         <h4>You Picked</h4>
-        <Choice choice={playerChoice} />
+        <Choice choice={playerChoice} winner ={outcome === 'win'} />
       </div>
       {
         outcome &&
@@ -59,9 +59,9 @@ const ResultContainer = () => {
           <button onClick={handleClick}>play again</button>
         </div>
       }
-      <div className={`${style.choiceContainer} ${style.won}`}>
+      <div className={`${style.choiceContainer}`}>
         <h4>The HOuse Picked</h4>
-        <Choice choice={computerChoice} />
+        <Choice choice={computerChoice} winner={outcome === 'lose'} />
       </div>
     </div>
   )

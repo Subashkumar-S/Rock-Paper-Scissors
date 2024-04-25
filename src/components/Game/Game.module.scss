@@ -23,35 +23,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure the background is behind other elements */
+  z-index: -1; 
 }
 
 .choiceButton {
   position: absolute;
-  width: 80px; /* Adjust button size */
-  height: 80px; /* Adjust button size */
-  background-color: transparent; /* Make background transparent */
+  width: 80px; 
+  height: 80px; 
+  background-color: transparent; 
   border: none;
   border-radius: 100px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2; /* Ensure buttons are above the background */
+  z-index: 2; 
+  transition: all 2s linear;
 
   @media screen and (min-width: 720px) {
-    width: 100px; /* Adjust button size */
-    height: 100px;
+    width: 10rem; 
+    height: 9.5rem;
   }
 }
 
 .rock {
   top: calc(50% - 120px);
-  // left: calc(50% - 40px); 
   background: $rock-gradient;
 
   @media screen and (min-width: 720px) {
-    top: calc(20% - 20px);
+    top: calc(20% - 60px);
     
   }
 
@@ -63,8 +63,8 @@
   background: $paper-gradient;
 
   @media screen and (min-width: 720px) {
-    top: calc(50% - 70px);
-    left: calc(40% - 70px);
+    top: calc(50% - 90px);
+    left: calc(40% - 110px);
   }
 }
 
@@ -74,8 +74,8 @@
   background: $scissors-gradient;
 
   @media screen and (min-width: 720px) {
-    top: calc(50% - 70px);
-    right: calc(40% - 70px);
+    top: calc(50% - 90px);
+    right: calc(40% - 110px);
   }
 }
 
@@ -85,8 +85,8 @@
   background: $lizard-gradient;
 
   @media screen and (min-width: 720px) {
-    bottom: calc(20% - 20px);
-    left: calc(40% - 20px);
+    bottom: calc(20% - 70px);
+    left: calc(40% - 40px);
   }
 }
 
@@ -96,8 +96,8 @@
   background: $cyan;
 
   @media screen and (min-width: 720px) {
-    bottom: calc(20% - 20px);
-    right: calc(40% - 20px);
+    bottom: calc(20% - 70px);
+    right: calc(40% - 40px);
   }
 }
 
