@@ -20,9 +20,10 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+
   @media screen and (max-width: 720px) {
     position: absolute;
-    bottom: 20vh;
+    bottom: 10vh;
     gap: 1rem;
   }
 }
